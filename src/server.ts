@@ -14,9 +14,17 @@ const app = express();
 //   res.json({ message: "Hello World!" });
 // });
 
+// app.get("/", (req, res) => {
+//   res.download("tsconfig.json");
+// });
+
+app.set("view engine", "ejs");
+
 app.get("/", (req, res) => {
-  res.download("tsconfig.json");
+  res.render("index");
 });
+
+
 
 app.listen(3000, () => {
   console.log(`Express is running on 3000`);
