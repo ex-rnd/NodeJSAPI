@@ -1,0 +1,31 @@
+{
+  "name": "nodejsapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ex-rnd/NodeJSAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ex-rnd/NodeJSAPI/issues"
+  },
+  "homepage": "https://github.com/ex-rnd/NodeJSAPI#readme",
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.4",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
