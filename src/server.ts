@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import { title } from "process";
+import { taskRouter } from "./routes/tasks";
 
 const app = express();
 
@@ -30,27 +31,9 @@ app.get("/", (req, res) => {
   res.render("index", { text: "Hello from EJS!" });
 });
 
-app.get("/tasks", (req, res) => {
-  res.json({
-    tasks: [{
-        id: 1,
-        title: "Task 1",
-        completed: false
-    }]
-  });
-});
-
-app.post("/tasks", (req, res) => {
-  res.json({
-    tasks: [{
-        id: 2,
-        title: "Task 2",
-        completed: false
-    }]
-  });
-});
 
 
+app.use("/tasks", taskRouter)
 
 
 
