@@ -12,12 +12,29 @@ taskRouter.get("/", (req, res) => {
   });
 });
 
-taskRouter.post("/", (req, res) => {
+
+taskRouter.get("/:id", (req, res) => {
+  const taskId = req.params.id;
   res.json({
     tasks: [{
-        id: 2,
-        title: "Task 2",
+        id: taskId,
+        title: `Task ${taskId}`,
         completed: false
+    }]
+  });
+});
+
+
+
+
+taskRouter.post("/", (req, res) => {
+
+  const title = req.body.title;
+  const completed = req.body.completed;  
+  res.json({
+    tasks: [{
+        title,
+        completed 
     }]
   });
 });
