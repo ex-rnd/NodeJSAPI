@@ -4,7 +4,19 @@ import { title } from "process";
 import { taskRouter } from "./routes/tasks";
 import { logger } from "./middleware/logger";
 
+import cors from "cors";
+import morgan from "morgan";
+
+import errorHandler from "./middleware/errorHandler";
+
+
 const app = express();
+
+
+app.use(cors());
+app.use(morgan("tiny"));
+
+
 
 // Middleware
 app.use(express.json());
@@ -34,7 +46,7 @@ app.use(express.urlencoded({}));
 // });
 
 // Custom Middleware 
-app.use(logger);
+// app.use(logger);
 
 
 
@@ -56,6 +68,7 @@ app.get("/", (req, res) => {
 app.use("/tasks", taskRouter)
 
 
+app.use(errorHandler);
 
 app.listen(3000, () => {
   console.log(`Express is running on 3000`);

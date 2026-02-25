@@ -11,12 +11,22 @@ GET http://localhost:3000/tasks/1 HTTP/1.1
 ### Get Tasks By ID 
 GET http://localhost:3000/tasks/2 HTTP/1.1
 
-### Create a new Tasks 
+### Create a new Tasks - Unauthorized 
 POST http://localhost:3000/tasks HTTP/1.1
 Content-Type: application/json
 
 {
     "title": "Another Task",
+    "completed": false
+}
+
+### Create a new Tasks - Authorized
+POST http://localhost:3000/tasks HTTP/1.1
+Content-Type: application/json
+x-api-key: mysecretkey
+
+{
+    "title": "Another Task after Authorization",
     "completed": false
 }
 
@@ -26,7 +36,14 @@ Content-Type: application/x-www-form-urlencoded
 
 title=Another+task&completed=false
 
+### Update a Tasks - Protected / Authorized
+POST http://localhost:3000/tasks/2 HTTP/1.1
+Content-Type: application/json
 
+{
+    "title": "Updated task title",
+    "completed": true
+}
 
 
 

@@ -1,4 +1,5 @@
 import express from "express";
+import { auth } from "../middleware/auth"
 
 export const taskRouter = express.Router();
 
@@ -51,6 +52,7 @@ taskRouter.get("/", (req, res) => {
 
 
 taskRouter.get("/:id", (req, res) => {
+  throw new Error("Something went wrong ...")
   const taskId = req.params.id;
   res.json({
     tasks: [{
@@ -64,7 +66,7 @@ taskRouter.get("/:id", (req, res) => {
 
 
 
-taskRouter.post("/", (req, res) => {
+taskRouter.post("/", auth, (req, res) => {
   const title = req.body.title;
   const completed = req.body.completed;  
   res.json({
@@ -75,6 +77,8 @@ taskRouter.post("/", (req, res) => {
   });
 });
 
+// Using Auth Middleware Tactfully 
+taskRouter.use(auth);
 
 taskRouter.put("/:id", (req, res) => {
   const taskId = req.params.id; 
