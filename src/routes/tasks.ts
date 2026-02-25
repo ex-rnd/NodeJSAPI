@@ -52,7 +52,7 @@ taskRouter.get("/", (req, res) => {
 
 
 taskRouter.get("/:id", (req, res) => {
-  throw new Error("Something went wrong ...")
+  //throw new Error("Something went wrong ...")
   const taskId = req.params.id;
   res.json({
     tasks: [{
