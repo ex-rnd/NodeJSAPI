@@ -2,6 +2,8 @@
 ### List Tasks 
 GET http://localhost:3000/tasks HTTP/1.1
 
+### Search Tasks
+GET http://localhost:3000/tasks?search=My Title HTTP/1.1
 
 ### Get Tasks By ID 
 GET http://localhost:3000/tasks/1 HTTP/1.1
