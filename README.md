@@ -2,18 +2,21 @@
 - NodeJSAPI is a TypeScript-powered Express API with EJS templating, middleware for logging, authentication, and error handling.
 - It’s designed to be modular, secure, and developer-friendly, with REST Client  files for quick API validation right inside VS Code
 
+
+🎬 Demo
+- Here’s how the API works in practice:
 <p align="center">
 <img width="728" height="479" alt="Revenue-Profit-Transaction-ScatterPlot" src="https://github.com/user-attachments/assets/c56e4443-0dd6-4618-b2d5-be8c26da26b7" />
 </p>
 
 
 ### ⚙️ Set Up
-#### Prerequisites
+#### a. Prerequisites
 -	Node.js (v24+ recommended)
 -	npm or yarn
 -	TypeScript
 
-#### Installation
+#### b. Installation
 ```bash
 git clone https://github.com/ex-rnd/NodeJSAPI.git
 cd NodeJSAPI
@@ -21,7 +24,7 @@ npm install
 
 ```
 
-#### Environment Variables
+#### c. Environment Variables
 ```bash
 API_KEY=mysecretkey
 PORT=3000
