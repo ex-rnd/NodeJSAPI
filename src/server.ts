@@ -5,7 +5,16 @@ import { taskRouter } from "./routes/tasks";
 
 const app = express();
 
+// Middleware
 app.use(express.json());
+
+// Middleware
+app.use(express.urlencoded({}));
+
+// // Middleware
+// app.use(express.urlencoded({
+//   extended: true
+// }));
 
 // app.get("/", (req, res) => {
 //     res.send("Hi");
@@ -24,6 +33,8 @@ app.use(express.json());
 // });
 
 app.set("view engine", "ejs");
+
+// Middleware
 app.use(express.static(path.join(__dirname, "..", "public")));
 
 
@@ -34,7 +45,7 @@ app.get("/", (req, res) => {
 });
 
 
-
+// Middleware
 app.use("/tasks", taskRouter)
 
 
