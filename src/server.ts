@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import { title } from "process";
 import { taskRouter } from "./routes/tasks";
+import { logger } from "./middleware/logger";
 
 const app = express();
 
@@ -61,19 +62,19 @@ app.listen(3000, () => {
 });
 
 
-function logger(
-  req: express.Request,
-  res: express.Response,
-  next: express.NextFunction,
-) {
-  console.log(
-    `${req.method} 
-     ${req.path} - 
-     ${new Date().toISOString()}    
-    `
-  );
-  next();
-}
+// function logger(
+//   req: express.Request,
+//   res: express.Response,
+//   next: express.NextFunction,
+// ) {
+//   console.log(
+//     `${req.method} 
+//      ${req.path} - 
+//      ${new Date().toISOString()}    
+//     `
+//   );
+//   next();
+// }
 
 
 
