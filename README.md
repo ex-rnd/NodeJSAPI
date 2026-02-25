@@ -34,7 +34,7 @@ PORT=3000
 ### 🏗️ Project Structure
 ```
 nodejsapi/
-├── dist/                    # Compiled JS output (ignored in git)
+├── dist/                    # Compiled JS output  
 ├── node_modules/            # Project dependencies
 │
 ├── public/                  # Static assets
