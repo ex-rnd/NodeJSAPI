@@ -1,5 +1,9 @@
 // API Testing Using REST Client Extension
 // api-test.http
+
+### GET EJS View
+GET http://localhost:3000/ HTTP/1.1
+
 ### List Tasks 
 GET http://localhost:3000/tasks HTTP/1.1
 
