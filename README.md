@@ -1,14 +1,18 @@
 ## 🌟 Overview
 - NodeJSAPI is a TypeScript-powered Express API with EJS templating, middleware for logging, authentication, and error handling.
 - It’s designed to be modular, secure, and developer-friendly, with REST Client  files for quick API validation right inside VS Code
---- ✨ --- 
+--- 
+✨ 
+--- 
 
 🎬 Demo
 - Here’s how the API works in practice:
 <p align="center">
 <img width="728" height="479" alt="Revenue-Profit-Transaction-ScatterPlot" src="https://github.com/user-attachments/assets/c56e4443-0dd6-4618-b2d5-be8c26da26b7" />
 </p>
---- ✨ --- 
+--- 
+✨ 
+--- 
 
 ### ⚙️ Set Up
 #### a. Prerequisites
@@ -28,7 +32,9 @@ npm install
 API_KEY=mysecretkey
 PORT=3000
 ```
---- ✨ --- 
+--- 
+✨ 
+--- 
 
 ### 🏗️ Project Structure
 ```
@@ -62,7 +68,9 @@ nodejsapi/
 ├── README.md
 └── tsconfig.json
 ```
---- ✨ --- 
+--- 
+✨ 
+--- 
 
 ### 🚀 Scripts
 - Build → `npm run build`
@@ -75,7 +83,9 @@ nodejsapi/
 - Auth `auth.ts` → Protects routes with `x-api-key` header.
 - Logger `logger.ts` → Logs method, path, status code, and timestamp.
 - ErrorHandler `errorHandler.ts` → Centralized error handling with JSON responses.
---- ✨ --- 
+--- 
+✨ 
+--- 
 
 ### 📡 API Endpoints
 - `GET/tasks` →  List all tasks
@@ -83,7 +93,9 @@ nodejsapi/
 - `GET/tasks/:id` →  Get task by ID
 - `POST/tasks` → Create task (requires `x-api-key`)
 - `PUT/tasks` →  Update task (requires `x-api-key`)
---- ✨ --- 
+--- 
+✨ 
+--- 
 
 ### 🧪 Testing
 #### REST Client (Manual)
@@ -101,7 +113,9 @@ x-api-key: mysecretkey
   "completed": false
 }
 ```
---- ✨ --- 
+--- 
+✨ 
+--- 
 
 ### 🎨 Views
 - The project uses EJS templates for rendering dynamic HTML.
@@ -117,7 +131,9 @@ app.get("/", (req, res) => {
   res.render("index", { text: "Hello from EJS!" });
 });
 ```
---- ✨ --- 
+--- 
+✨ 
+--- 
 
 ### 🤝 Contributing
 #### 🚀 Suggested next steps and improvements
