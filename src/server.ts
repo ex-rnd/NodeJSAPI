@@ -32,6 +32,12 @@ app.use(express.urlencoded({}));
 //   res.download("tsconfig.json");
 // });
 
+// Custom Middleware 
+app.use(logger);
+
+
+
+
 app.set("view engine", "ejs");
 
 // Middleware
