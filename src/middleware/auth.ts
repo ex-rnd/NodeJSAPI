@@ -1,3 +1,5 @@
+// middleware/auth.ts
+
 import express from "express";
 
 export function auth(

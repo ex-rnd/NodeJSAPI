@@ -1,3 +1,5 @@
+// middleware/errorHandler.ts
+// 
 import { Request, Response, NextFunction } from "express";
 import { getErrorMessage } from "../utils";
 
