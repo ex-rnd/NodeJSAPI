@@ -5,10 +5,9 @@
 
 ### 🎬 Demo
 - Here’s how the API works in practice:
-<p align="center">
-<img width="728" height="479" alt="Revenue-Profit-Transaction-ScatterPlot" src="https://github.com/user-attachments/assets/c56e4443-0dd6-4618-b2d5-be8c26da26b7" />
-</p>
-
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/f63bd85f-bdd1-4868-96a7-64615a17478f" width="400" />
+</div>
 --- 
 
 ### ⚙️ Set Up
