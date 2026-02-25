@@ -53,3 +53,34 @@ app.use("/tasks", taskRouter)
 app.listen(3000, () => {
   console.log(`Express is running on 3000`);
 });
+
+
+function logger(
+  req: express.Request,
+  res: express.Response,
+  next: express.NextFunction,
+) {
+  console.log(
+    `${req.method} 
+     ${req.path} - 
+     ${new Date().toISOString()}    
+    `
+  );
+  next();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
